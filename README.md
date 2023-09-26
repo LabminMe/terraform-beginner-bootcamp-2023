@@ -70,6 +70,46 @@ chmod u+x ./bin/install_terraform_cli
 We need to be careful when using the Init because it will not re-run if we restart an existing workspace. 
 Made change in the .gitpod.yml on line #3 from Init to Before.
 
+### Working with Environmental Variables (Env Vars)
+
+We can list out all Env Vars using the 'env' command.
+We can filter specific results of that command by piping the results to the 'grep' command [env | grep <capitalization sensitive variable>]
+
+#### Setting & Unsetting Env Vars
+
+In the terminal we can set variables by using 'export HELLO='Hello World!''
+We can also unset that variable by using 'unset HELLO'
+
+We can set a temporary variable by running a command 
+```sh
+HELLO ='Hello world!' ./bin/print_message
+```
+Within a bash script we can also set an Env Var without export
+```sh
+HELLO= 'Hello world!'
+
+echo $HELLO
+```
+
+#### Printing Vars
+
+We can print an Env Var using echo (eg. 'echo $HELLO')
+
+#### Scoping of Env Vars
+When you open up new bash terminals in VSCode, it will not be aware of env vars that you have set in another window.
+If you want to Env Vars to persist across all future bash terminals that are open you need to set env vars in your bash profile. (eg. 'bash_profile')
+
+#### Persisting Env Vars in Gitpod
+We can persist env vars into gitpod by storing them in Gitpod 'Secret Storage' 
+
+```
+gp env HELLO='Hello World!'
+```
+All future workspaces launched will set the env vars for all bash terminals opened in those workspaces.
+You can also set Env Vars in the '.gitpod.yml' but this can only non-sensitive Env Vars. ( we will use both)
+
+
+
 Reference: 
 ![Terraform-CLI Install](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 ![Wikipedia - Shebang](https://en.wikipedia.org/wiki/Shebang_(Unix))
