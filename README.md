@@ -110,8 +110,9 @@ You can also set Env Vars in the '.gitpod.yml' but this can only non-sensitive E
 
 
 
-Reference: 
-![Terraform-CLI Install](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
-![Wikipedia - Shebang](https://en.wikipedia.org/wiki/Shebang_(Unix))
-![Wikipedia - CHMOD](https://en.wikipedia.org/wiki/Chmod)
-![Gitpod - Tasks in Workspaces](https://www.gitpod.io/docs/configure/workspaces/tasks)
+### AWS CLI Installation
+
+AWS CLI is installed for this project via the bash script ['./bin/install_aws_cli']
+
+
+[Getting Started Install (CLI)](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
