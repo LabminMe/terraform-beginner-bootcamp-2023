@@ -189,3 +189,8 @@ This file can contain sensitive data. If you lose this file, you lose knowing th
 ### Terraform Directory
 
 `.terraform` directory contains binaries of terraform proviers.
+
+## AWS 
+
+### AWS S3 Buckets
+(AWS S3 Bucket Naming Rules)[https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html]
