@@ -193,3 +193,17 @@ This file can contain sensitive data. If you lose this file, you lose knowing th
 ### Terraform Directory
 
 `.terraform` directory contains binaries of terraform proviers.
+
+### AWS S3 Buckets
+
+To have Terraform create an S3 bucket, we need to add in the provider component into the (main.tf)[./main.tf] file and add the resource in as well.
+Reference [Registry.Terraform.io](https://registry.terraform.io/providers/hashicorp/aws/latest/docs) for the documentation and code samples of those components.
+
+**S3 Buckets have requirements for naming**: of which some of the most important for this project are
+- 10-64 characters in length
+- No upper case
+- Can contain lower case, numbers, and some basic symbols
+- Name must start and end with a letter or number (not a symbol)
+- Must be unique
+
+[AWS S3 Bucket Naming Requirements](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html)
