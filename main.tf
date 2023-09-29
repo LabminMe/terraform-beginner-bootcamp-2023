@@ -1,4 +1,10 @@
 terraform {
+  cloud {
+    organization = "labmin"
+    workspaces {
+      name = "terra-house-1"
+    }
+  }
   required_providers {
     random = {
       source = "hashicorp/random" 
@@ -14,6 +20,8 @@ terraform {
 # Configure AWS Provider
 provider "aws" {
   # Configuration options
+  region = AWS_DEFAULT_REGION
+  
 }
 
 # Configure the Random Provider
