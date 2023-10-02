@@ -207,3 +207,13 @@ Reference [Registry.Terraform.io](https://registry.terraform.io/providers/hashic
 - Must be unique
 
 [AWS S3 Bucket Naming Requirements](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html)
+
+## Connecting to Terraform Cloud
+
+### Create a Project and Workspace
+
+### Create environmental variables to connect with AWS S3
+
+### Connecting to Terraform Cloud in the script
+
+using `terraform login`

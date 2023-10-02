@@ -20,7 +20,7 @@ terraform {
 # Configure AWS Provider
 provider "aws" {
   # Configuration options
-  region = AWS_DEFAULT_REGION
+  region = "us-east-2"
   
 }
 
