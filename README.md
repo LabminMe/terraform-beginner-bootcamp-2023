@@ -1,5 +1,14 @@
 # Terraform Beginner Bootcamp 2023
-
+### Index
+- 0.1.0: Semantic Versioning
+- 0.2.0: Install the Terraform CLI
+- 0.3.0: 
+- 0.4.0: 
+- 0.5.0: 
+- 0.6.0: 
+- 0.7.0: Terraform Cloud & Terraform Login
+- 0.8.0: Terraform Login Workaround
+- 0.9.0: Terraform Alias (`tf`)
 ## 0.1.x Semantic Versioning :mage:
 This project will use semantic versioning for tagging.
 ![Semantic Versioning 2.0](https://semver.org/)
