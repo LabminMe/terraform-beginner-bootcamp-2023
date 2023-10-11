@@ -208,12 +208,58 @@ Reference [Registry.Terraform.io](https://registry.terraform.io/providers/hashic
 
 [AWS S3 Bucket Naming Requirements](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html)
 
-## Connecting to Terraform Cloud
+## Terraform Cloud 
 
-### Create a Project and Workspace
+Using the Terraform Cloud allows you to create a workspace in a project to be used with your Gitpod environment.
+A quick note for reference in Terraform Cloud terminology:
+- **Project:** It an conceptual container of workspaces and could exist without a workspace.
+- **Workspace:** Specific to an environment and used in a project.
 
-### Create environmental variables to connect with AWS S3
+In the environment you will see the normal Terraform plans to make your life easier
+```
+# Log into Terraform Cloud
+terraform login
 
-### Connecting to Terraform Cloud in the script
+# Initialize Terraform
+terraform init
 
-using `terraform login`
+# Have Terraform evaluate the plan
+terraform plan
+
+# Tell Terraform to run the plan
+terraform apply
+
+# Walking back the changes from the plan
+terraform destroy
+```
+
+### Terraform Login 
+
+**Steps to resolve Terraform Cloud Login & Gitpod Workspace**
+Using the command `terraform login` will allow you to log into the Terraform Cloud space however on running it for the first time, you will need to create a token for use. 
+
+The workaround is manually generating a token in the Terraform CLI
+
+```
+https://app.terraform.io/app/settings/tokens?source=terraform-login
+```
+
+Then create & open the file manually here:
+
+```sh
+touch /home/gitpod/.terraform.d/credentials.tfrc.json
+open /home/gitpod/.terraform.d/credentials.tfrc.json
+```
+
+Provide the following code (place the token in the file):
+
+```json
+{
+    "credentials":{
+        "app.terraform.io":{
+            "token": "YOUR-TERRAFORM-CLOUD-TOKEN"
+        }
+    }
+}
+```
+
