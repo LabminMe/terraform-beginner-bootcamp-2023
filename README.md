@@ -272,3 +272,4 @@ Provide the following code (place the token in the file):
 }
 ```
 
+We have automated the process as a workaround with the following bash script [bin/generate_tfrc_credentials](bin/generate_tfrc_credentials)
